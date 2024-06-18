@@ -18,7 +18,7 @@
         <div  class="carousel-item">
           <div class="item-content">
             
-              <CardTitle/>
+              <GridComponent :cards="fakeData"/>
             
           </div>
         </div>
@@ -29,14 +29,16 @@
 
 <script>
 import VueSlickCarousel from "vue-slick-carousel";
- import CardTitle from "./CardTitle.vue";
+import CardTitle from "./CardTitle.vue";
+import GridComponent from './GridComponent.vue';
 import "vue-slick-carousel/dist/vue-slick-carousel.css";
 import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
+
 
 export default {
   name: "MyComponent",
   components: { VueSlickCarousel, 
-     CardTitle 
+     CardTitle , GridComponent
 },
 
   data() {
