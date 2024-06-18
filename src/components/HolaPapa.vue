@@ -7,12 +7,18 @@
         :vertical="true"
         style="height: 100%"
       >
-        <div v-for="item in fakeData" :key="item.id" class="carousel-item">
+        <div  class="carousel-item">
           <div class="item-content">
-            <div class="item-inner">
-              <h3>{{ item.title }}</h3>
-              <p>{{ item.description }}</p>
-            </div>
+            
+              <CardTitle />
+            
+          </div>
+        </div>
+        <div  class="carousel-item">
+          <div class="item-content">
+            
+              <CardTitle/>
+            
           </div>
         </div>
       </VueSlickCarousel>
@@ -22,26 +28,26 @@
 
 <script>
 import VueSlickCarousel from "vue-slick-carousel";
-// import CardTitle from "./CardTitle.vue";
+ import CardTitle from "./CardTitle.vue";
 import "vue-slick-carousel/dist/vue-slick-carousel.css";
 import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
 
 export default {
   name: "MyComponent",
   components: { VueSlickCarousel, 
-    // CardTitle 
+     CardTitle 
 },
 
   data() {
     return {
       fakeData: [
-        { id: 1, title: "Slide 1", description: "Description for slide 1" },
-        { id: 2, title: "Slide 2", description: "Description for slide 2" },
-        { id: 3, title: "Slide 3", description: "Description for slide 3" },
-        { id: 4, title: "Slide 4", description: "Description for slide 4" },
-        { id: 5, title: "Slide 5", description: "Description for slide 5" },
-        { id: 6, title: "Slide 6", description: "Description for slide 6" },
-        { id: 7, title: "Slide 7", description: "Description for slide 7" },
+      { id: 1, title: "Card 1", description: "Description for card 1" },
+        { id: 2, title: "Card 2", description: "Description for card 2" },
+        { id: 3, title: "Card 3", description: "Description for card 3" },
+        { id: 4, title: "Card 4", description: "Description for card 4" },
+        { id: 5, title: "Card 5", description: "Description for card 5" },
+        { id: 6, title: "Card 6", description: "Description for card 6" },
+        { id: 7, title: "Card 7", description: "Description for card 7" },
       ],
     };
   },
@@ -70,7 +76,7 @@ export default {
 }
 
 .item-content {
-  /**ACA MODIFICO LA ALTURA PARA MODIFICAR EL TAMAÑO DEL CAROUSEL*/
+  /**ACA MODIFICO LA ALTURA PARA MODIFICAR EL TAMAÑO DEL CAROUSEL-CONTENEDOR QUE TIENE UN ELEMENTO DEL SLIDER*/
   width: 100%;
   height: 700px;
   display: flex;
