@@ -7,13 +7,14 @@
         :vertical="true"
         style="height: 100%"
       >
-        <div  class="carousel-item">
+        <div  class="carousel-item" v-for="card in fakeData" :key="card.id">
           <div class="item-content">
             
-              <CardTitle />
+              <CardTitle :title="card.title" :description="card.description" :width="card.width" :height="card.height"/>
             
           </div>
         </div>
+        <!-- Aqui va el ultimo componente a renderizar (la grid) -->
         <div  class="carousel-item">
           <div class="item-content">
             
@@ -41,13 +42,13 @@ export default {
   data() {
     return {
       fakeData: [
-      { id: 1, title: "Card 1", description: "Description for card 1" },
-        { id: 2, title: "Card 2", description: "Description for card 2" },
-        { id: 3, title: "Card 3", description: "Description for card 3" },
-        { id: 4, title: "Card 4", description: "Description for card 4" },
-        { id: 5, title: "Card 5", description: "Description for card 5" },
-        { id: 6, title: "Card 6", description: "Description for card 6" },
-        { id: 7, title: "Card 7", description: "Description for card 7" },
+      { id: 1, title: "Card 1", description: "Description for card 1", width: "300px", height: "200px" },
+        { id: 2, title: "Card 2", description: "Description for card 2", width: "350px", height: "620px" },
+        { id: 3, title: "Card 3", description: "Description for card 3", width: "320px", height: "180px" },
+        { id: 4, title: "Card 4", description: "Description for card 4", width: "280px", height: "250px" },
+        { id: 5, title: "Card 5", description: "Description for card 5", width: "400px", height: "300px" },
+        // { id: 6, title: "Card 6", description: "Description for card 6", width: "350px", height: "200px" },
+        // { id: 7, title: "Card 7", description: "Description for card 7", width: "300px", height: "250px" }
       ],
     };
   },
